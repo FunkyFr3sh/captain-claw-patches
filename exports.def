@@ -1,0 +1,43 @@
+LIBRARY SMACKW32.DLL
+
+EXPORTS
+    _SmackBufferString@8                     = SMACKW32x._SmackBufferString@8                     @1
+    _SmackBufferOpen@24                      = SMACKW32x._SmackBufferOpen@24                      @2
+    _SmackBufferBlit@32                      = SMACKW32x._SmackBufferBlit@32                      @3
+    _SmackBufferFocused@4                    = SMACKW32x._SmackBufferFocused@4                    @4
+    _SmackBufferNewPalette@12                = SMACKW32x._SmackBufferNewPalette@12                @5
+    _SmackBufferClose@4                      = SMACKW32x._SmackBufferClose@4                      @6
+    _SmackBufferSetPalette@4                 = SMACKW32x._SmackBufferSetPalette@4                 @7
+    _SmackBufferClear@8                      = SMACKW32x._SmackBufferClear@8                      @8
+    _SmackSetSystemRes@4                     = SMACKW32x._SmackSetSystemRes@4                     @9
+    _SmackBufferToBuffer@32                  = SMACKW32x._SmackBufferToBuffer@32                  @10
+    _SmackBufferToBufferTrans@36             = SMACKW32x._SmackBufferToBufferTrans@36             @11
+    _SmackBufferFromScreen@16                = SMACKW32x._SmackBufferFromScreen@16                @12
+    _SmackBufferCopyPalette@12               = SMACKW32x._SmackBufferCopyPalette@12               @13
+    _SmackOpen@12                            = SMACKW32x._SmackOpen@12                            @14
+    _SmackSimulate@4                         = SMACKW32x._SmackSimulate@4                         @15
+    _SmackFrameRate@4                        = SMACKW32x._SmackFrameRate@4                        @16
+    _SmackSoundOnOff@8                       = SMACKW32x._SmackSoundOnOff@8                       @17
+    _SmackClose@4                            = SMACKW32x._SmackClose@4                            @18
+    _SmackDoFrame@4                          = SMACKW32x._SmackDoFrame@4                          @19
+    _SmackSummary@8                          = SMACKW32x._SmackSummary@8                          @20
+    _SmackNextFrame@4                        = SMACKW32x._SmackNextFrame@4                        @21
+    _SmackToScreen@24                        = SMACKW32x._SmackToScreen@24                        @22
+    _SmackToBuffer@28                        = SMACKW32x._SmackToBuffer@28                        @23
+    _SmackColorTrans@8                       = SMACKW32x._SmackColorTrans@8                       @24
+    _SmackColorRemap@16                      = SMACKW32x._SmackColorRemap@16                      @25
+    _SmackGetTrackData@12                    = SMACKW32x._SmackGetTrackData@12                    @26
+    _SmackGoto@8                             = SMACKW32x._SmackGoto@8                             @27
+    _SmackToBufferRect@8                     = SMACKW32x._SmackToBufferRect@8                     @28
+    _SmackSoundInTrack@8                     = SMACKW32x._SmackSoundInTrack@8                     @29
+    _SmackVolumePan@16                       = SMACKW32x._SmackVolumePan@16                       @30
+    _SmackSoundCheck@0                       = SMACKW32x._SmackSoundCheck@0                       @31
+    _SmackWait@4                             = SMACKW32x._SmackWait@4                             @32
+    _SmackSoundUseMSS@4                      = SMACKW32x._SmackSoundUseMSS@4                      @33
+    _SmackSoundUseDW@12                      = SMACKW32x._SmackSoundUseDW@12                      @34
+    _donemarker@20                           = SMACKW32x._donemarker@20                           @35
+    _TimerFunc@20                            = SMACKW32x._TimerFunc@20                            @36
+    _SetDirectSoundHWND@4                    = SMACKW32x._SetDirectSoundHWND@4                    @37
+    _SmackSoundUseDirectSound@4              = SMACKW32x._SmackSoundUseDirectSound@4              @38
+    _SmackSoundUseWin@0                      = SMACKW32x._SmackSoundUseWin@0                      @39
+    TaskDialogIndirectHack                                                                        @40
