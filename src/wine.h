@@ -14,7 +14,7 @@ extern "C" {
 // ### Functions ###
 
 BOOL wine_add_dll_overrides();
-BOOL wine_add_dll_override(WCHAR* dll_name);
+BOOL wine_add_dll_override(const WCHAR* dll_name);
 
 #ifdef __cplusplus
 };

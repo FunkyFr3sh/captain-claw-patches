@@ -11,7 +11,7 @@ BOOL wine_add_dll_overrides()
     return dd || ws;
 }
 
-BOOL wine_add_dll_override(WCHAR* dll_name)
+BOOL wine_add_dll_override(const WCHAR* dll_name)
 {
     if (!IS_WINE)
         return FALSE;

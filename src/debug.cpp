@@ -9,20 +9,8 @@ LONG (WINAPI* claw_TopLevelExceptionFilter)(EXCEPTION_POINTERS*) = (LONG(WINAPI*
 LONG WINAPI dbg_exception_handler(EXCEPTION_POINTERS* exception)
 {
     static int dmp_count;
-    static BOOL(WINAPI * MiniDumpWriteDump_)(
-        HANDLE,
-        DWORD,
-        HANDLE,
-        MINIDUMP_TYPE,
-        PMINIDUMP_EXCEPTION_INFORMATION,
-        PMINIDUMP_USER_STREAM_INFORMATION,
-        PMINIDUMP_CALLBACK_INFORMATION
-        );
-        
-    if (!MiniDumpWriteDump_)
-        MiniDumpWriteDump_ = (void*)GetProcAddress(LoadLibraryA("Dbghelp.dll"), "MiniDumpWriteDump");
-
-    if (!MiniDumpWriteDump_ || dmp_count >= 10 || !exception || !exception->ExceptionRecord)
+    
+    if (dmp_count >= 10 || !exception || !exception->ExceptionRecord)
     {
         return claw_TopLevelExceptionFilter(exception);
     }
@@ -87,11 +75,11 @@ LONG WINAPI dbg_exception_handler(EXCEPTION_POINTERS* exception)
         info.ExceptionPointers = exception;
         info.ClientPointers = TRUE;
 
-        MiniDumpWriteDump_(
+        MiniDumpWriteDump(
             GetCurrentProcess(),
             GetCurrentProcessId(),
             dmp_file,
-            0,
+            MiniDumpNormal,
             &info,
             NULL,
             NULL);

@@ -5,7 +5,7 @@ TARGET      ?= SMACKW32.DLL
 LDFLAGS     ?= -Wl,--enable-stdcall-fixup -s -shared -static
 CFLAGS      ?= -masm=intel -O2 -Wall -march=pentium4 -D _WIN32_WINNT=0x0600
 CXXFLAGS    ?= -masm=intel -O2 -Wall -march=pentium4 -D _WIN32_WINNT=0x0600
-LIBS        ?= -lcomctl32
+LIBS        ?= -lcomctl32 -ldbghelp
 
 CC           = i686-w64-mingw32-gcc
 CXX          = i686-w64-mingw32-g++
