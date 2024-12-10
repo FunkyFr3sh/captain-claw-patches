@@ -97,7 +97,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\patch.h" />
+    <ClInclude Include="src\*.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\*.c" />
