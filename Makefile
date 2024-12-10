@@ -12,8 +12,8 @@ CXX          = i686-w64-mingw32-g++
 STRIP       ?= i686-w64-mingw32-strip
 WINDRES     ?= i686-w64-mingw32-windres
 
-SRCS     := $(wildcard src/*.c) $(wildcard src/*/*.c) res.rc
-OBJS     := $(addsuffix .o, $(basename $(SRCS)))
+SRCS        := $(wildcard src/*.c) $(wildcard src/*.cpp) res.rc
+OBJS        := $(addsuffix .o, $(basename $(SRCS)))
 
 .PHONY: all clean
 all: $(TARGET)

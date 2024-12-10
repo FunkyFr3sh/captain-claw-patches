@@ -10,7 +10,7 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)
     switch(fdwReason)
     {
     case DLL_PROCESS_ATTACH:
-        patch_setdword((DWORD*)0x004AEEC8, (DWORD)dbg_exception_handler);
+        patch_setdword((DWORD*)(0x004AEEC7 + 1), (DWORD)dbg_exception_handler);
         patch_call((char*)0x004A66B4, (char*)fake_WinMain);
         break;
     case DLL_PROCESS_DETACH:
