@@ -5,7 +5,7 @@
 int(WINAPI* claw_WinMain)(HINSTANCE, HINSTANCE, PSTR, int) = 
     (int(WINAPI*)(HINSTANCE, HINSTANCE, PSTR, int))0x004A3490;
 
-EXTERN_C int APIENTRY fake_WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmdshow)
+int APIENTRY fake_WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmdshow)
 {
     if (wine_add_dll_overrides())
     {
