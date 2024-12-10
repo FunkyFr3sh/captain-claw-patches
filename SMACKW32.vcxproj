@@ -100,16 +100,10 @@
     <ClInclude Include="src\patch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\dllmain.c" />
+    <ClCompile Include="src\*.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\winmain.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\wine.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\debug.c" />
+    <ClCompile Include="src\*.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="res.rc" />
