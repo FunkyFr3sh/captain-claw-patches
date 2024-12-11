@@ -34,35 +34,14 @@ LONG WINAPI dbg_exception_handler(EXCEPTION_POINTERS* exception)
         st.wSecond,
         st.wMilliseconds,
         exception->ExceptionRecord->ExceptionAddress);
-
-    if (FILE_EXISTS(file_name))
-    {
-        _snprintf(
-            file_name,
-            sizeof(file_name) - 1,
-            "Errors\\%04d-%02d-%02d_%02d-%02d-%02d-%03d_2_0x%p.dmp",
-            st.wYear,
-            st.wMonth,
-            st.wDay,
-            st.wHour,
-            st.wMinute,
-            st.wSecond,
-            st.wMilliseconds,
-            exception->ExceptionRecord->ExceptionAddress);
-    }
-
-    if (FILE_EXISTS(file_name))
-    {
-        return claw_TopLevelExceptionFilter(exception);
-    }
-
+        
     HANDLE dmp_file =
         CreateFile(
             file_name,
             GENERIC_READ | GENERIC_WRITE,
             FILE_SHARE_WRITE | FILE_SHARE_READ,
             0,
-            CREATE_ALWAYS,
+            CREATE_NEW,
             0,
             0);
 
